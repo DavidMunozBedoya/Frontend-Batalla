@@ -14,9 +14,11 @@
     "@tailwindcss/vite": "^4.3.3",
     "antd": "^6.6.0",
     "react": "^19.2.8",
+    "react-countdown": "^2.3.6",
     "react-dom": "^19.2.8",
     "react-hook-form": "^7.85.0",
     "tailwindcss": "^4.3.3",
+    "wouter": "^3.10.0",
     "yup": "^1.7.1",
     "zustand": "^5.0.14"
   },

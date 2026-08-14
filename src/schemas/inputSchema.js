@@ -8,7 +8,7 @@ export const inputSchema = Yup.object().shape({
       })
       .required('Debe ingresar un número de teléfono')
       .max(10, "Revisa tu teléfono debe contener diez digitos")
-      .min(10, 'te faltan digitos')
+      .min(10, 'Te faltan digitos')
    ,
    comments: Yup.string()
       .transform((value, originalValue) => {

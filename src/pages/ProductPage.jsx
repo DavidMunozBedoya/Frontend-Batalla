@@ -12,7 +12,7 @@ export default function ProductPage() {
 
    return (
       <div className="flex justify-center bg-wallpaper bg-cover bg-center bg-no-repeat min-h-screen w-full">
-         <div className="bg-white w-full md:w-120 space-y-4 md:rounded-xl rounded-none md:m-3 overflow-hidden shadow-2xl shadow-amber-50">
+         <div className="bg-white w-full md:w-100 space-y-4 md:rounded-xl rounded-none md:m-3 overflow-hidden shadow-2xl shadow-amber-50">
             <div className="w-full h-100 rounded-b-2xl md:rounded-none overflow-hidden">
                <img className="w-full h-full object-cover" src={data.url_image} alt="imagen del producto" />
             </div>
@@ -28,7 +28,7 @@ export default function ProductPage() {
                />
             </div>
             <div className="text-center w-full">
-               <span className="text-xs">Calificia tu Experiencia</span>
+               <span className="text-xs">Califica tu Experiencia</span>
             </div>
             <Form />
          </div>

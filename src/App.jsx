@@ -2,6 +2,7 @@ import './App.css'
 import Loader from './components/Loader'
 import Modal from './components/Modal'
 import ProductPage from './pages/ProductPage'
+// import { AppRouter } from './routes/AppRouter'
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <div>
          <Modal />
          <Loader />
+         {/* <AppRouter /> */}
          <ProductPage />
       </div>
    )
