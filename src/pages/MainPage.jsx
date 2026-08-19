@@ -3,11 +3,11 @@ import { data } from "../utils/data";
 
 export default function MainPage() {
    return (
-      <div className="min-h-screen">
-         <div className="text-center text-xl md:text-5xl font-black font-luckiest uppercase py-40">
-            <h1>Batalla de las Hamburgesas  🍔🍟🥤</h1>
+      <div className="h-screen px-3 md:px-10">
+         <div className="flex justify-center items-center text-center text-3xl md:text-5xl font-black font-luckiest uppercase">
+            <img className="w-40 md:w-100" src="/public/logo.webp" alt="logo" />
          </div>
-         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 px-10">
+         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {data.map((item) => (
                <CardProduct
                   key={item.id}
