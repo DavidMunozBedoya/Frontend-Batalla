@@ -7,7 +7,7 @@ export default function Loader() {
    return (
       <div className="flex justify-center items-center min-h-screen">
          <div className="animate-bounce size-40">
-            <img src="/public/loader.webp" alt="loader" />
+            <img src="/public/logo.webp" alt="logo" />
          </div>
       </div>
    )

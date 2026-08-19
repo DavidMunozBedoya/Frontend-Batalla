@@ -17,7 +17,7 @@ export default function Form() {
       formState: { errors, isValid }
    } = useForm(
       {
-         mode: "all",
+         mode: "onBlur",
          resolver: yupResolver(inputSchema)
       }
    );
@@ -31,7 +31,7 @@ export default function Form() {
       <div>
          <form className="flex flex-col justify-center items-center px-12 gap-2">
             <Input
-               type="number"
+               type="tel"
                id="phoneNumber"
                name="phoneNumber"
                placeholder="Celular*"

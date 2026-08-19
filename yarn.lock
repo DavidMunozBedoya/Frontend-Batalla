@@ -397,6 +397,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/anton@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource/anton@npm:5.3.0"
+  checksum: 10c0/7d5a3d961d598b6331c8f0cb17f333a6a4397589b27f6d882617fc42f64a1f93b10d794f33f734ea69705318082fcd84aeb9dca077d88b5688321f293640f88b
+  languageName: node
+  linkType: hard
+
+"@fontsource/luckiest-guy@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource/luckiest-guy@npm:5.3.0"
+  checksum: 10c0/27b42209cb5c4bc0a2201209135852648923caaa41ef139e7efff56a1c58231573ce70ea9f8e98e0e4eb7af2ad2defb1063160e97fbeb95cc0342e168dca9388
+  languageName: node
+  linkType: hard
+
 "@hookform/resolvers@npm:^5.7.1":
   version: 5.7.1
   resolution: "@hookform/resolvers@npm:5.7.1"
@@ -1700,6 +1714,8 @@ __metadata:
   dependencies:
     "@babel/core": "npm:^7.29.7"
     "@eslint/js": "npm:^10.0.1"
+    "@fontsource/anton": "npm:^5.3.0"
+    "@fontsource/luckiest-guy": "npm:^5.3.0"
     "@hookform/resolvers": "npm:^5.7.1"
     "@rolldown/plugin-babel": "npm:^0.2.3"
     "@tailwindcss/vite": "npm:^4.3.3"

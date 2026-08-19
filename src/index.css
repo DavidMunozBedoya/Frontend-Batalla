@@ -31,3 +31,8 @@ body,
 @utility bg-wallpaper {
    background-image: url('./assets/fondo.webp')
 }
+
+/* fuente personalizada */
+@theme{
+   --font-luckiest: "Lukiest Guy", cursive;
+}
