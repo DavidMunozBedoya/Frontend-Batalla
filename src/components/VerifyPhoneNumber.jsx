@@ -24,7 +24,7 @@ export default function VerifyPhoneNumber({ phoneNumber = "" }) {
          />
          <p className="text-xs">
             Expira en:
-         </p>  
+         </p>
          {isActive ? <TimerDown /> :
             <div className="text-blue-600">
                <a href="#">
@@ -36,8 +36,10 @@ export default function VerifyPhoneNumber({ phoneNumber = "" }) {
             disabled={token.length < 4}
             className={`bg-red-500 rounded-3xl w-60 md:w-xs text-white font-bold hover:cursor-pointer hover:translate-0.5`}
             text="Confirmar"
-            onClick={closeModal}
-
+            onClick={() => {
+               closeModal();
+               history.go(-2);
+            }}
          />
       </div>
    );

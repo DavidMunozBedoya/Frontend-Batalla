@@ -4,6 +4,7 @@ import { useAuthStore } from "../stores/useAuthStore"
 import { PublicRoutes } from "./PublicRoutes";
 import MainPage from "../pages/MainPage";
 import ProductPage from "../pages/ProductPage";
+import PolicyPage from "../pages/PolicyPage";
 
 export const AppRouter = () => {
 
@@ -19,16 +20,26 @@ export const AppRouter = () => {
          <Route path="/">
             <Redirect to="/home" />
          </Route>
+         
          <Route path="/home" children={
             <PublicRoutes auth={isAuth}>
                <MainPage />
             </PublicRoutes>
          } />
+
          <Route path="/participante/:id" children={
             <PublicRoutes auth={isAuth}>
                <ProductPage />
             </PublicRoutes>
          } />
+
+         <Route path="/politica" children={
+            <PublicRoutes auth={isAuth}>
+               <PolicyPage />
+            </PublicRoutes>
+         } />
+
+         
       </Switch>
    )
 }

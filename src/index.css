@@ -32,7 +32,11 @@ body,
    background-image: url('./assets/fondo.webp')
 }
 
+@utility bg-wallpaper-burguer {
+   background-image: url('./assets/fondo_burguer.jpg')
+}
+
 /* fuente personalizada */
 @theme{
-   --font-luckiest: "Lukiest Guy", cursive;
+   --font-luckiest: "Luckiest Guy", cursive;
 }

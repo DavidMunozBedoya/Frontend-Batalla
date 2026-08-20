@@ -4,7 +4,7 @@ export default function CardProduct({ item }) {
 
    return (
       <Link href={`/participante/${item.id}`}>
-         <div className="relative flex flex-col border border-gray-400 rounded-2xl gap-3 overflow-auto hover:cursor-pointer">
+         <div className="relative flex flex-col border border-gray-400 rounded-2xl gap-3 overflow-auto hover:cursor-pointer bg-white">
             <div className="w-full h-80 shrink-0">
                <img className="w-full h-full object-cover" src={item.url_image} alt="" />
             </div>

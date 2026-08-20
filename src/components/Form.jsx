@@ -6,6 +6,7 @@ import { useModalStore } from "../stores/useModalStore";
 import { useForm, useWatch } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { inputSchema } from "../schemas/inputSchema";
+import { Link } from "wouter";
 
 
 export default function Form() {
@@ -47,11 +48,9 @@ export default function Form() {
             />
             <span className="text-xs text-center">
                Al continuar, aceptas nuestra{" "}
-               <a className="text-gray-500 hover:text-black" href="#">
-                  <u>
-                     <strong>política de privacidad y protección de datos personales.</strong>
-                  </u>
-               </a>
+               <Link href={'/politica'}>
+                  <strong className="text-gray-500 hover:text-black underline">política de privacidad y protección de datos personales.</strong>
+               </Link>
             </span>
             <Button
                type="button"
