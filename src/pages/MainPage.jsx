@@ -3,7 +3,7 @@ import { data } from "../utils/data";
 
 export default function MainPage() {
    return (
-      <div className="min-h-screen bg-gradient-to-t from-[#f91814] via-[#f93000] to-[#f5e3cd] object-cover p-15 md:px-10">
+      <div className="min-h-screen bg-linear-to-t from-[#f91814] via-[#f93000] to-[#f5e3cd] bg-cover p-15 md:px-10">
          <div className="flex justify-center items-center text-center text-3xl md:text-5xl font-black font-luckiest uppercase">
             <img className="w-40 md:w-100" src="/public/logo.webp" alt="logo" />
          </div>

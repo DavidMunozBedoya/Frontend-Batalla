@@ -28,15 +28,19 @@ body,
 }
 
 /* utilidad personalizada para usar como clase */
-@utility bg-wallpaper {
-   background-image: url('./assets/fondo.webp')
+@layer bg-wallpaper {
+   .bg-wallpaper {
+      background-image: url('./assets/fondo.webp');
+   }
 }
 
-@utility bg-wallpaper-burguer {
-   background-image: url('./assets/fondo_burguer.jpg')
+@layer bg-wallpaper-burguer {
+   .bg-wallpaper-burguer {
+      background-image: url('./assets/fondoBurguer.jpg');
+   }
 }
 
 /* fuente personalizada */
-@theme{
+@theme {
    --font-luckiest: "Luckiest Guy", cursive;
 }
