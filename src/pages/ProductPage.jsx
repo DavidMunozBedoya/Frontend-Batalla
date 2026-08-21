@@ -4,6 +4,7 @@ import ButtonSpan from "../components/ButtonSpan";
 import Form from "../components/Form";
 import { useParams } from "wouter";
 import { useState } from "react";
+import { motion } from "motion/react";
 
 export default function ProductPage() {
    const { id } = useParams();
@@ -21,7 +22,14 @@ export default function ProductPage() {
             <div className="relative w-full h-100 rounded-b-2xl md:rounded-none overflow-hidden">
                <div className="absolute top-0 left-1/2 -translate-x-1/2 flex-col py-25 w-full">
                   <img className="absolute top-0 left-1/2 -translate-x-1/2 size-30 " src="/public/logo.webp" alt="logo" />
-                  <h1 className="text-center z-50 text-2xl md:text-4xl text-white font-luckiest tracking-widest font-black drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]  uppercase">”{product.productName}”</h1>
+                  <motion.h1
+                     initial={{ y: -30, opacity: 0 }}
+                     animate={{ opacity: 1, y: 0 }}
+                     transition={{ type: "spring", duration: 4, ease: "easeOut", repeat: Infinity }}
+                     className="text-center z-50 text-2xl sm:text-5xl text-white font-luckiest tracking-widest font-black drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]  uppercase"
+                  >
+                     ”{product.productName}”
+                  </motion.h1>
                </div>
                <img className="w-full h-full object-cover" src={product.url_image} alt="imagen del producto" />
             </div>
@@ -29,7 +37,14 @@ export default function ProductPage() {
             <div className="flex flex-row justify-center">
                <div className="grid grid-rows-2">
                   <p className="flex items-end justify-center text-[7px] text-red-600 pb-2">{select.like ? "Me gusta" : ""}</p>
-                  <div className={select.like ? "border border-red-600 rounded-full p-2 text-red-600" : "text-gray-400 hover:text-black hover:cursor-pointer p-2"}>
+                  <motion.div
+                     {...(!select.like &&
+                     {
+                        animate: { scale: 1.5 },
+                        transition: { duration: 2, repeat: Infinity, repeatType: "reverse" }
+                     }
+                     )}
+                     className={select.like ? "border border-red-600 rounded-full p-2 text-red-600" : "text-gray-400 hover:text-black hover:cursor-pointer p-2"}>
                      <ButtonSpan
                         className={!select.like ? "text-gray-400 hover:text-black hover:cursor-pointer" : "text-red-600 "}
                         icon={<IconThumbUp />}
@@ -38,7 +53,7 @@ export default function ProductPage() {
                            disLike: false
                         })}
                      />
-                  </div>
+                  </motion.div>
                </div>
                <div className="grid grid-rows-2">
                   <p className="flex items-end justify-center text-[7px] text-red-600 pb-2">{select.disLike ? "No Me gusta" : ""}</p>

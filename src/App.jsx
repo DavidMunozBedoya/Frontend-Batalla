@@ -4,10 +4,12 @@ import Loader from './components/Loader'
 import Modal from './components/Modal'
 import { AppRouter } from './routes/AppRouter'
 import { useLoaderStore } from './stores/useLoaderStore'
+import { useLocation } from 'wouter'
 
 function App() {
 
    const { toggleLoading } = useLoaderStore();
+   const [ location ] = useLocation();
 
    useEffect(() => {
       toggleLoading(true);
@@ -17,7 +19,7 @@ function App() {
       }, 3000)
 
       return () => clearTimeout(t)
-   }, [toggleLoading]);
+   }, [toggleLoading, location]);
 
    return (
       <div>

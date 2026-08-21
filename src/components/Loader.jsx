@@ -2,12 +2,12 @@ import { useLoaderStore } from "../stores/useLoaderStore"
 
 export default function Loader() {
    const { isLoading } = useLoaderStore();
-   if(!isLoading) return;
+   if (!isLoading) return null;
 
    return (
-      <div className="flex justify-center items-center min-h-screen">
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
          <div className="animate-bounce size-40">
-            <img src="/public/logo.webp" alt="logo" />
+            <img src="/logo.webp" alt="logo" />
          </div>
       </div>
    )
