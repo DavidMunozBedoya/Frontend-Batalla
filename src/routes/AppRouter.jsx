@@ -6,6 +6,7 @@ import { NotFound } from "../components/NotFound";
 import MainPage from "../pages/MainPage";
 import ProductPage from "../pages/ProductPage";
 import PolicyPage from "../pages/PolicyPage";
+import EndingPage from "../pages/EndingPage";
 
 export const AppRouter = () => {
 
@@ -39,6 +40,13 @@ export const AppRouter = () => {
                <PolicyPage />
             </PublicRoutes>
          } />
+
+         <Route path="/agradecimientos" children={
+            <PublicRoutes auth={isAuth}>
+               <EndingPage />
+            </PublicRoutes>
+         } />
+
          <Route path="/404" children={<NotFound />} />
          <Redirect to="/404" replace />
 

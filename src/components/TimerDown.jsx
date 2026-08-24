@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useTimerStore } from "../stores/useTimerStore";
 
-export default function TimerDown() {
+export default function TimerDown(className = "") {
 
    const [seconds, setSeconds] = useState(180);
    const { isActive, toggleActive } = useTimerStore();
@@ -27,10 +27,8 @@ export default function TimerDown() {
    }
 
    return (
-      <div className="py-2">
-         <div className="flex justify-center items-center border-2 border-red-600 rounded-full size-14">
-            <strong className="text-xs">{TimerFormat(seconds)}</strong>
-         </div>
+      <div className="flex justify-center items-center">
+         <strong className="text-xs">{TimerFormat(seconds)}</strong>
       </div>
    )
 }

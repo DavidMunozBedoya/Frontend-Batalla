@@ -16,7 +16,7 @@ function App() {
 
       const t = setTimeout(() => {
          toggleLoading(false)
-      }, 3000)
+      }, 2000)
 
       return () => clearTimeout(t)
    }, [toggleLoading, location]);
