@@ -7,6 +7,7 @@ import MainPage from "../pages/MainPage";
 import ProductPage from "../pages/ProductPage";
 import PolicyPage from "../pages/PolicyPage";
 import EndingPage from "../pages/EndingPage";
+import AlternativePage from "../pages/AlternativePage";
 
 export const AppRouter = () => {
 
@@ -25,7 +26,8 @@ export const AppRouter = () => {
 
          <Route path="/home" children={
             <PublicRoutes auth={isAuth}>
-               <MainPage />
+               {/* <MainPage /> */}
+               <AlternativePage />
             </PublicRoutes>
          } />
 

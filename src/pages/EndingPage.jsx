@@ -4,13 +4,13 @@ import Button from "../components/Button";
 export default function EndingPage() {
    return (
       <div className="min-h-screen bg-white flex flex-col">
-         <main className="flex-1 flex flex-col items-center text-center px-6 pt-10 pb-24 overflow-y-auto">
+         <main className="flex-1 flex flex-col items-center text-center px-6 p-5">
             <section className="flex flex-col items-center gap-3">
                <CircleCheck
                   className="size-16 text-green-500"
                />
                <h1 className="text-lg md:text-xl font-bold">
-                  Voto registrado
+                  voto registrado
                </h1>
                <p className="text-neutral-600">
                   Tu voto ha sido registrado con éxito.
@@ -37,7 +37,7 @@ export default function EndingPage() {
             </section>
          </main>
 
-         <footer className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm py-2 text-[10px] text-center text-neutral-500">
+         <footer className="fixed bottom-0 left-0 right-0 bg-white/95 py-2 text-[10px] text-center text-neutral-500">
             <strong>®2026</strong> Todos los derechos reservados
          </footer>
       </div>

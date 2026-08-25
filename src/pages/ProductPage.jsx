@@ -80,7 +80,7 @@ export default function ProductPage() {
                      </div>
                   </div>
                </div>
-               <div className="text-center w-full">
+               <div className="text-center w-full pb-3">
                   <span className="text-xs">Califica tu Experiencia</span>
                </div>
                <Form />

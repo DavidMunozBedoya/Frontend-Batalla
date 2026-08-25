@@ -5,14 +5,16 @@ export default function MainPage() {
    return (
       <div className="min-h-screen bg-linear-to-t from-[#f91814] via-[#f93000] to-[#f5e3cd] bg-cover">
          <header className="flex justify-center items-center py-8 md:py-12 px-4">
-            <img
-               className="w-40 md:w-72 lg:w-80"
-               src="/logo.webp"
-               alt="Nombre de la marca"
-               width={400}
-               height={160}
-               loading="eager"
-            />
+            <figure>
+               <img
+                  className="w-40 md:w-72 lg:w-80"
+                  src="/logo.webp"
+                  alt="Nombre de la marca"
+                  width={400}
+                  height={160}
+                  loading="eager"
+               />
+            </figure>
          </header>
 
          <main className="max-w-7xl mx-auto px-4 pb-10 md:px-10 md:pb-16">
