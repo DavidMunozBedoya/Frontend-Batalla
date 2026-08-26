@@ -1,4 +1,4 @@
-import CardProduct from "../components/CardProduct";
+import ParticipantInfoCard from "../components/ParticipantInfoCard";
 import { data } from "../data/data";
 
 export default function MainPage() {
@@ -21,7 +21,7 @@ export default function MainPage() {
             {data.length > 0 ? (
                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
                   {data.map((item) => (
-                     <CardProduct key={item.id} item={item} />
+                     <ParticipantInfoCard key={item.id} item={item} />
                   ))}
                </div>
             ) : (

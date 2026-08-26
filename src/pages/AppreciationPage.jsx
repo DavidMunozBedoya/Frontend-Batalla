@@ -1,7 +1,7 @@
 import { CircleCheck } from "../assets/icons/tablerIcons";
 import Button from "../components/Button";
 
-export default function EndingPage() {
+export default function AppreciationPage() {
    return (
       <div className="min-h-screen bg-white flex flex-col">
          <main className="flex-1 flex flex-col items-center text-center px-6 p-5">
@@ -38,7 +38,9 @@ export default function EndingPage() {
          </main>
 
          <footer className="fixed bottom-0 left-0 right-0 bg-white/95 py-2 text-[10px] text-center text-neutral-500">
-            <strong>®2026</strong> Todos los derechos reservados
+            <p>
+               <strong>®2026</strong> Todos los derechos reservados
+            </p>
          </footer>
       </div>
    )

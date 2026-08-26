@@ -3,11 +3,10 @@ import { Redirect, Route, Switch, useLocation } from "wouter";
 import { useAuthStore } from "../stores/useAuthStore"
 import { PublicRoutes } from "./PublicRoutes";
 import { NotFound } from "../components/NotFound";
-import MainPage from "../pages/MainPage";
-import ProductPage from "../pages/ProductPage";
 import PolicyPage from "../pages/PolicyPage";
-import EndingPage from "../pages/EndingPage";
-import AlternativePage from "../pages/AlternativePage";
+import IndexPage from "../pages/IndexPage";
+import AppreciationPage from "../pages/AppreciationPage";
+import ParticipantVotePage from "../pages/ParticipantVotePage";
 
 export const AppRouter = () => {
 
@@ -20,20 +19,20 @@ export const AppRouter = () => {
 
    return (
       <Switch>
+
          <Route path="/">
             <Redirect to="/home" />
          </Route>
 
          <Route path="/home" children={
             <PublicRoutes auth={isAuth}>
-               {/* <MainPage /> */}
-               <AlternativePage />
+               <IndexPage />
             </PublicRoutes>
          } />
 
          <Route path="/participante/:id" children={
             <PublicRoutes auth={isAuth}>
-               <ProductPage />
+               <ParticipantVotePage />
             </PublicRoutes>
          } />
 
@@ -45,7 +44,7 @@ export const AppRouter = () => {
 
          <Route path="/agradecimientos" children={
             <PublicRoutes auth={isAuth}>
-               <EndingPage />
+               <AppreciationPage />
             </PublicRoutes>
          } />
 

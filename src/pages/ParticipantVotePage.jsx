@@ -6,7 +6,7 @@ import { useParams } from "wouter";
 import { useState } from "react";
 import { motion } from "motion/react";
 
-export default function ProductPage() {
+export default function ParticipantVotePage() {
    const { id } = useParams();
    const [select, setSelect] = useState(
       {
@@ -14,7 +14,7 @@ export default function ProductPage() {
          disLike: false
       }
    );
-   const product = data[id - 1];
+   const participant = data[id - 1];
 
    return (
       <div className="flex justify-center bg-wallpaper bg-cover bg-center bg-no-repeat min-h-screen w-full">
@@ -27,23 +27,23 @@ export default function ProductPage() {
                <div className="relative w-full h-100 overflow-hidden">
                   <img
                      className="w-full h-full object-cover"
-                     src={product.url_image}
-                     alt={`Foto de ${product.productName}`}
+                     src={participant.url_image}
+                     alt={`Foto de ${participant.productName}`}
                   />
                   <motion.div
                      initial={{ opacity: 0 }}
-                     animate={{opacity: 1 }}
-                     transition={{duration: 5, ease: "linear", }}
+                     animate={{ opacity: 1 }}
+                     transition={{ duration: 5, ease: "linear", }}
                      className="absolute inset-0 flex flex-col items-center justify-start pt-6 bg-linear-to-b from-black/40 to-transparent">
-                     <img className="size-16" src="/logo.webp" alt="Nombre de la marca" />
-                     <h1 className="mt-4 text-center text-2xl sm:text-4xl text-white font-luckiest tracking-widest font-black uppercase drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] px-4">
-                        “{product.productName}”
+                     <img className="size-20" src="/logo.webp" alt="Nombre de la marca" />
+                     <h1 className="text-center text-2xl sm:text-4xl text-white font-luckiest tracking-widest font-black uppercase drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] px-4">
+                        “{ participant.productName }”
                      </h1>
                   </motion.div>
                </div>
             </header>
             <main>
-               <h1 className="text-xl md:text-4xl text-center font-bold">{product.restaurant}®</h1>
+               <h1 className="text-xl md:text-4xl text-center font-bold">{participant.restaurant}®</h1>
                <div className="flex flex-row justify-center">
                   <div className="grid grid-rows-2">
                      <p className="flex items-end justify-center text-[7px] text-red-600 pb-2">{select.like ? "Me gusta!" : ""}</p>
