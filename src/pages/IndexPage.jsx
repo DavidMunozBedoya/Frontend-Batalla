@@ -11,7 +11,7 @@ export default function IndexPage() {
             <div className="relative flex justify-end">
                <nav className="fixed flex items-center p-5 space-x-3">
                   <a className="hover:border-2 border-red-600 rounded-full p-0.5" href="#"><IconHome /></a>
-                  <a className="border hover:border-2 rounded-full font-luckiest text-[10px] text-red-600 px-4 py-2 bg-transparent"/*  href="#main" */>Participantes</a>
+                  <a className="border hover:border-2 rounded-full font-luckiest text-[10px] text-red-600 px-4 py-2 bg-transparent" href="#main">Participantes</a>
                </nav>
             </div>
          </header>
@@ -23,7 +23,7 @@ export default function IndexPage() {
                transition={{ duration: 4, ease: "linear" }}
                className="absolute bottom-0 left-0 md:bottom-10 md:left-0 text-white/80 p-4 md:p-8 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                <h1 className="text-3xl md:text-8xl font-luckiest">Batalla de Hamburguesas</h1>
-               <p className="text-[8px] md:text-xl capitalize ">¡Conoce los establecimientos vinculados al Concurso Gastronómico Batalla de las Hamburguesas en su Cuarta Versión! Pruébalas todas y elige el que más te guste</p>
+               <p className="text-[8px] md:text-xl capitalize ">¡Conoce los establecimientos vinculados al Concurso Gastronómico Batalla de las Hamburguesas en su Cuarta Versión! Pruébalas todas y elige la que más te guste</p>
                <div className="flex justify-center animate-bounce p-5">
                   <IconDown />
                </div>
