@@ -17,7 +17,7 @@ export default function PolicyPage() {
 
             <div className="px-6 md:px-10 py-8 space-y-6">
                <div className="text-center space-y-2">
-                  <h1 className="text-xl md:text-2xl font-bold">
+                  <h1 className="text-xl md:text-2xl font-luckiest">
                      Política de privacidad y protección de datos personales
                   </h1>
                   <h2 className="text-sm text-neutral-500 underline underline-offset-2">

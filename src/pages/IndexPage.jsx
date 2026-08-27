@@ -1,37 +1,51 @@
-import { IconDown, IconHome } from "../assets/icons/tablerIcons";
-import { motion } from "motion/react";
 import { data } from "../data/data";
+import { Link } from "wouter";
+import { motion } from "motion/react";
 import ParticipantInfoCard from "../components/ParticipantInfoCard";
+import { IconDown } from "../assets/icons/tablerIcons";
 
 export default function IndexPage() {
    return (
       <div className="min-w-full min-h-screen bg-black/90">
-         <header className="relative z-5">
-            <img className="fixed size-15 lg:size-20 mt-1.5" src="/logo.webp" alt="" />
-            <div className="relative flex justify-end">
-               <nav className="fixed flex items-center p-5 space-x-3">
-                  <a className="hover:border-2 border-red-600 rounded-full p-0.5" href="#"><IconHome /></a>
-                  <a className="border hover:border-2 rounded-full font-luckiest text-[10px] text-red-600 px-4 py-2 bg-transparent" href="#main">Participantes</a>
-               </nav>
+         <motion.header
+            initial={{ opacity: 0.5, y: -50 }}
+            whileHover={{ opacity: 1, y: 0 }}
+
+            className="fixed w-full top-0 z-5 bg-black/20 mask-b-from-0 hover:mask-b-from-90%">
+            <nav className="grid grid-cols-2 p-5">
+               <motion.div
+                  className="flex justify-start items-center">
+                  <a href="#">
+                     <motion.img
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.3 }}
+                        className="size-8 lg:size-20" src="/logo.webp" alt="logo_batalla" />
+                  </a>
+               </motion.div>
+               <div className="flex justify-end items-center">
+                  <a className="border hover:border-2 rounded-full font-luckiest text-[10px] text-red-600 px-3 py-1 bg-transparent" href="#main">Participantes</a>
+               </div>
+            </nav>
+         </motion.header>
+         <div className="relative">
+            <div className="max-h-130 mx-auto mask-b-from-70% mask-b-to-99%">
+               <img className="w-full object-cover" src="/pexels-juan-santos-1351708581-25684786.jpg" alt="imagen_batalla" />
             </div>
-         </header>
-         <div className="relative max-h-160 mx-auto mask-b-from-70% mask-b-to-99% border-white">
-            <img className="w-full object-cover" src="/pexels-juan-santos-1351708581-25684786.jpg" alt="imagen_batalla" />
             <motion.div
-               initial={{ opacity: 0, y: 20 }}
-               animate={{ opacity: 1, y: 0 }}
+               initial={{ opacity: 0, y: 150 }}
+               animate={{ opacity: 1, y: 110 }}
                transition={{ duration: 4, ease: "linear" }}
-               className="absolute bottom-0 left-0 md:bottom-10 md:left-0 text-white/80 p-4 md:p-8 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+               className="absolute bottom-0 left-0 right-0 md:bottom-0 md:left-0 text-white/80 p-4 md:p-8 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                <h1 className="text-3xl md:text-8xl font-luckiest">Batalla de Hamburguesas</h1>
-               <p className="text-[8px] md:text-xl capitalize ">¡Conoce los establecimientos vinculados al Concurso Gastronómico Batalla de las Hamburguesas en su Cuarta Versión! Pruébalas todas y elige la que más te guste</p>
-               <div className="flex justify-center animate-bounce p-5">
-                  <IconDown />
+               <p className="text-[8px] md:text-xl capitalize font-light">¡Conoce los establecimientos vinculados al Concurso Gastronómico Batalla de las Hamburguesas en su Cuarta Versión! Pruébalas todas y elige la que más te guste</p>
+               <div className="flex justify-center animate-bounce py-5">
+                  <IconDown width="40" height="40" />
                </div>
             </motion.div>
          </div>
-         <main id="main" className="w-full text-white p-5">
-            <div className="">
-               <h2 className="text-3xl pb-10 capitalize text-center font-luckiest ">participantes</h2>
+         <main id="main" className="w-full text-white p-5 pt-15 md:pt-10 ">
+            <div>
+               <h2 className="text-xl md:text-3xl py-12 capitalize text-center font-luckiest ">participantes</h2>
                {data.length > 0 ? (
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 lg:gap-8">
                      {data.map((item) => (
@@ -45,10 +59,43 @@ export default function IndexPage() {
                )}
             </div>
          </main>
-         <footer className="relative text-white font-luckiest pt-15 bg-black/50">
-            <h2 className="text-center font-light">Sponsors</h2>
-            <img src="./patrocinadores.webp" alt="patrocinadores" />
+         <footer className="text-white font-luckiest mask-b-from-80% p-5 bg-black/20">
+            <div className="grid grid-cols-1 md:grid-cols-3 text-start justify-baseline gap-5 tracking-wide py-10">
+               <div>
+                  Legal
+                  <div className="flex justify-start pt-3 font-sans text-sm text-gray-300 hover:text-red-600 capitalize">
+                     <div>
+                        <Link href={"/politica"}>
+                           <h3>Política Tratamiento de datos</h3>
+                        </Link>
+                     </div>
 
+                  </div>
+               </div>
+               <div>
+                  redes
+                  <div className="flex flex-col justify-start pt-3 font-sans text-sm text-gray-300 capitalize">
+                     <div>
+                        <a className="hover:text-red-600" href="https://web.whatsapp.com/">Whatsapp</a>
+                     </div>
+                     <div>
+                        <a className="hover:text-red-600" href="https://www.instagram.com/">Instagram</a>
+                     </div>
+                     <div>
+                        <a className="hover:text-red-600" href="https://www.facebook.com/?locale=es_LA">Facebook</a>
+                     </div>
+                     <div>
+                        <a className="hover:text-red-600" href="https://www.tiktok.com/es/">Tik Tok</a>
+                     </div>
+                  </div>
+               </div>
+               <div className="text-center">
+                  Sponsors
+                  <div className="pt-3">
+                     <img src="/patrocinadores.webp" alt="" />
+                  </div>
+               </div>
+            </div>
          </footer>
       </div>
    )
