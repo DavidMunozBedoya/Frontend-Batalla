@@ -7,12 +7,9 @@ import { IconDown } from "../assets/icons/tablerIcons";
 export default function IndexPage() {
    return (
       <div className="min-w-full min-h-screen bg-black/90">
-         <motion.header
-            initial={{ opacity: 0.5, y: -50 }}
-            whileHover={{ opacity: 1, y: 0 }}
-
-            className="fixed w-full top-0 z-5 bg-black/20 mask-b-from-0 hover:mask-b-from-90%">
-            <nav className="grid grid-cols-2 p-5">
+         <header
+            className="fixed w-full top-0 z-5 bg-black/20 mask-b-from-0 hover:mask-b-from-100%">
+            <nav className="grid grid-cols-2 px-5">
                <motion.div
                   className="flex justify-start items-center">
                   <a href="#">
@@ -26,9 +23,9 @@ export default function IndexPage() {
                   <a className="border hover:border-2 rounded-full font-luckiest text-[10px] text-red-600 px-3 py-1 bg-transparent" href="#main">Participantes</a>
                </div>
             </nav>
-         </motion.header>
+         </header>
          <div className="relative">
-            <div className="max-h-130 mx-auto mask-b-from-70% mask-b-to-99%">
+            <div className="max-h-220 md:max-h-130 mx-auto mask-b-from-70% mask-b-to-99%">
                <img className="w-full object-cover" src="/pexels-juan-santos-1351708581-25684786.jpg" alt="imagen_batalla" />
             </div>
             <motion.div
@@ -43,7 +40,7 @@ export default function IndexPage() {
                </div>
             </motion.div>
          </div>
-         <main id="main" className="w-full text-white p-5 pt-15 md:pt-10 ">
+         <main id="main" className="w-full text-white p-5 pt-15 md:pt-10">
             <div>
                <h2 className="text-xl md:text-3xl py-12 capitalize text-center font-luckiest ">participantes</h2>
                {data.length > 0 ? (
@@ -60,23 +57,32 @@ export default function IndexPage() {
             </div>
          </main>
          <footer className="text-white font-luckiest mask-b-from-80% p-5 bg-black/20">
-            <div className="grid grid-cols-1 md:grid-cols-3 text-start justify-baseline gap-5 tracking-wide py-10">
+            <div className="grid grid-cols-1 md:grid-cols-4 text-start justify-baseline gap-5 tracking-wide py-3">
+               <div>
+                  Organizador
+                  <div className="pt-3">
+                     <a href="https://www.camaracartago.org/">
+                        <img className="w-50 hover:scale-105" src="/Logo_blanco_camara_cartago-1-1.png" alt="logo camara de comercio cartago" />
+                     </a>
+                  </div>
+               </div>
                <div>
                   Legal
-                  <div className="flex justify-start pt-3 font-sans text-sm text-gray-300 hover:text-red-600 capitalize">
+                  <div className="flex flex-col justify-start pt-3 font-sans text-sm text-gray-300 hover:text-red-600 capitalize">
                      <div>
                         <Link href={"/politica"}>
                            <h3>Política Tratamiento de datos</h3>
                         </Link>
                      </div>
-
                   </div>
                </div>
                <div>
                   redes
                   <div className="flex flex-col justify-start pt-3 font-sans text-sm text-gray-300 capitalize">
                      <div>
-                        <a className="hover:text-red-600" href="https://web.whatsapp.com/">Whatsapp</a>
+                        <a className="hover:text-red-600"
+                           href="https://wa.me"
+                           rel="noopener noreferrer">Whatsapp</a>
                      </div>
                      <div>
                         <a className="hover:text-red-600" href="https://www.instagram.com/">Instagram</a>
@@ -91,12 +97,15 @@ export default function IndexPage() {
                </div>
                <div className="text-center">
                   Sponsors
-                  <div className="pt-3">
-                     <img src="/patrocinadores.webp" alt="" />
+                  <div>
+                     <img src="/patrocinadores.webp" alt="imagen_patrocinadores" />
                   </div>
                </div>
             </div>
          </footer>
+         <div className="text-center text-white text-xs capitalize">
+            <p >®2026 derechos reservados de autor</p>
+         </div>
       </div>
    )
 }

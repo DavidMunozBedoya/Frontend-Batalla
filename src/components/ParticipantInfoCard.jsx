@@ -1,12 +1,13 @@
 import { Link } from "wouter";
 import { motion } from "motion/react";
+import { IconMapPin, IconStore } from "../assets/icons/tablerIcons";
 
 export default function ParticipantInfoCard({ item }) {
    return (
       <motion.div
-         initial={{ opacity: 0, y: 20 }}
+         initial={{ opacity: 0, y: 50 }}
          whileInView={{ opacity: 1, y: 0 }}
-         transition={{ duration: 3, ease: "easeInOut" }}
+         transition={{ duration: 2, ease: "easeInOut" }}
          viewport={{ once: true, amount: 0.1 }}
       >
          <Link
@@ -29,11 +30,11 @@ export default function ParticipantInfoCard({ item }) {
                   {item.description}
                </p>
                <div className="mt-auto flex flex-col gap-1 text-black text-[10px]">
-                  <span className="flex justify-start items-center gap-1">
-                     <span>👨‍🍳</span> {item.restaurant}
+                  <span className="flex justify-start items-end gap-1">
+                     <IconStore /> {item.restaurant}
                   </span>
-                  <span className="flex justify-start items-center gap-1">
-                     <span>🚩</span> {item.address}
+                  <span className="flex justify-start items-end gap-1">
+                     <IconMapPin /> {item.address}
                   </span>
                </div>
             </div>
@@ -41,3 +42,5 @@ export default function ParticipantInfoCard({ item }) {
       </motion.div>
    );
 }
+
+
